@@ -70,13 +70,14 @@ h1, h2, h3, h4, h5 {
 
 .navbar{
 	display: flex;
-	position: fixed;
 	overflow: hidden;
 	top: 5%;
 	width: 73%;
     justify-content: space-between;
     text-decoration: none;
     margin-left: 26%;
+    
+    
 
 
 }
@@ -90,22 +91,48 @@ nav a {
     font-size: 20px;
     font-weight: bold;
 
+}  
+@media (max-width: 800px){
+  nav {
+      flex-direction: column-reverse;
+      margin: 2%;
+      align-items: center;
+      font-size: 25px;
+      
+      
+      
+  }
+  
 }
+@media (max-width: 800px)
+{
+    nav a {
+    flex-direction: column;
+        border-bottom: 1px solid;
+        width: 100%;
+        padding-bottom: 7%;
+        text-align: center;
+    }
+   
+   }
 
-
-.ion{
+.ion{ 
 	display: flex;
 	flex-wrap: wrap;
 	justify-content:flex-start;
 	margin-left: 35%;
     margin-top: 10%;
-    
-    
+
 }
+
 .top-img{
     width: 48%;
 }
-
+@media(max-width: 800px){
+    .top-img{
+        display: none;
+    }
+}
 .ion-text{
 	display: flex;
 	flex-direction: column;
@@ -149,6 +176,7 @@ margin-left: 10%;
 
 
 .top-section {
+    
 	width: 90%;
 	padding-left: 3%;
 	margin-left: 10%;
@@ -171,6 +199,13 @@ margin-left: 10%;
 
     
 }
+@media (max-width: 800px){
+    .top-class{
+        flex-direction: column
+    
+    }
+}
+
 .middle-img {
 	margin:2%;
     width: 84%;
@@ -179,15 +214,25 @@ margin-left: 10%;
 
 
 .bottom-section{
-	
-	width: 85%;
+    width: 85%;
+    display: flex;
 	padding-left: 3%;
+
+
+}
+
 
 
 }
 .bottom{
 	display: flex;
-	justify-content: space-evenly;
+	justify-content: space-around;
+}
+@media (max-width: 800px){
+    .bottom-section{
+        flex-direction: column;
+    
+    }
 }
 .bottom-section{
     margin-left: 11%;
@@ -198,7 +243,11 @@ margin-left: 10%;
     font-size: 20px;
 }
 
-
+@media(max-width: 800px){
+    .top-section{
+        flex-direction: column;
+    }
+}
 .contact {
 	text-align: left;
 	width: 150px;

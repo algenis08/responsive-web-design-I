@@ -65,20 +65,21 @@ h1, h2, h3, h4, h5 {
 /* Copy and paste your work from yesterday here and start to refactor into flexbox */
 
 
-
+.header{
+    display: flex;
+    width: 100%;
     
+}
+   
 
 .navbar{
 	display: flex;
-	position: fixed;
-	overflow: hidden;
 	top: 5%;
 	width: 73%;
     justify-content: space-between;
     text-decoration: none;
     margin-left: 26%;
-
-
+    
 }
 
 nav a {
@@ -89,23 +90,84 @@ nav a {
     margin-top: auto;
     font-size: 20px;
     font-weight: bold;
+    margin-right: 7%;
 
+}  
+@media (max-width:900px){
+    nav  a { 
+        display: block;
+        padding-top: 10%;
+        width: 100%;
+    
+    }
+     
+}
+@media(max-width: 900px){
+    .logo{
+        display: block;  
+        order: -1;
+        width: 25%;
+        margin-left: 25%;
+        
+        
+    
+    }
+    .header{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
+@media (max-width: 700px){
+  nav {
+      flex-direction: column;
+      align-items: center;
+      font-size: 25px;
+          
+   }
+  nav a {
+    border-bottom: 1px solid;
+    width: 100%;
+    padding-bottom: 4%;
+    text-align: center;
+}
 
-.ion{
+}
+@media(max-width: 700px) {
+    .header{
+        display: flex;
+        flex-direction: column;
+   }
+   .logo {
+       order: -1;
+       width:40%;
+      
+   }
+   
+}
+
+    
+
+
+
+.ion{ 
 	display: flex;
 	flex-wrap: wrap;
 	justify-content:flex-start;
 	margin-left: 35%;
     margin-top: 10%;
-    
-    
+
 }
+
 .top-img{
     width: 48%;
 }
-
+@media(max-width: 900px){
+    .top-img{
+        display: none;
+    }
+}
 .ion-text{
 	display: flex;
 	flex-direction: column;
@@ -149,6 +211,7 @@ margin-left: 10%;
 
 
 .top-section {
+    
 	width: 90%;
 	padding-left: 3%;
 	margin-left: 10%;
@@ -171,6 +234,13 @@ margin-left: 10%;
 
     
 }
+@media (max-width: 800px){
+    .top-class{
+        flex-direction: column
+    
+    }
+}
+
 .middle-img {
 	margin:2%;
     width: 84%;
@@ -179,25 +249,41 @@ margin-left: 10%;
 
 
 .bottom-section{
+    width: 85%;
+    display: flex;
+
 	
-	width: 85%;
-	padding-left: 3%;
 
 
 }
+
+
+
+
 .bottom{
 	display: flex;
-	justify-content: space-evenly;
+	justify-content: space-around;
 }
+
+    
+
 .bottom-section{
-    margin-left: 11%;
-    width: 87%;
+    margin-left: 14%;
+    width: 87%1;
 }
+@media (max-width: 800px){
+    .bottom{
+        flex-direction: column;
+    
+    }
+}    
 .bottom-content{
     padding: 1%;
     font-size: 20px;
 }
 
+
+    
 
 .contact {
 	text-align: left;
